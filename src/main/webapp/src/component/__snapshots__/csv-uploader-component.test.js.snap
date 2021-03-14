@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CSV Upload renders correctly 1`] = `
+<div
+  className="Custom-yellow-bg jumbotron"
+>
+  <h1
+    className="Custom-black"
+  >
+    WELCOME TO CSV FILE UPLOADER!!!
+  </h1>
+  <div
+    className="Talk-bubble"
+    data-testid="dropzone"
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragEnter={[Function]}
+    onDragLeave={[Function]}
+    onDragOver={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    tabIndex={0}
+  >
+    <input
+      autoComplete="off"
+      data-testid="drop-input"
+      disabled={false}
+      multiple={true}
+      onChange={[Function]}
+      onClick={[Function]}
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+      tabIndex={-1}
+      type="file"
+    />
+    <p>
+      Drag 'n' drop csv file here, or click to select file
+    </p>
+  </div>
+  <p
+    className="Custom-black"
+  >
+    
+  </p>
+</div>
+`;
