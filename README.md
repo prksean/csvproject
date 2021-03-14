@@ -118,3 +118,8 @@ Header Content-Type: application/json
         - input으로 받은 파일의 type이 `text/csv` 인지 확인.
     - parseCsvToPeople
         - `opencsv`의 `CSVReader`를 사용하여 input으로 받은 CSV 파일을 `PeopleEntity` 리스트로 파싱.
+
+------------
+
+### UI Workflow 스크린샷
+- (./src/main/webapp/README.md) 참고.
