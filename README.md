@@ -58,7 +58,7 @@ spring.servlet.multipart.max-request-size=100MB
 > cd csvproject
 ```
 
-2. deploy.sh 실행 (윈도우의 경우 실행 전 수동으로 8090 포트 사용 확인 및 kill)
+2. [deploy.sh](./deploy.sh) 실행 (윈도우의 경우 실행 전 수동으로 8090 포트 사용 확인 및 kill)
 
 ###### MAC/Linux
 
@@ -94,17 +94,17 @@ Header Content-Type: application/json
 } 
 ```
 
-- CsvController
+- [CsvController](./src/main/java/com/sean/csvproject/controller/CsvController.java)
     - `/upload` 요청 처리.
     - `csvUploader`가 `@RequestPart("file") MultipartFile file`을 input으로 받아 처리.
     - `CsvUtil`의 `isCsvType` 메소드를 사용하여 CSV 포멧 여부 확인.
     - `CsvService`의 `persistPeople` 메소드를 사용하여 CSV 파일 DB Insert.
     - `ResponseEntity<ResponseMessage>`를 return.
 
-- PeopleEntity
+- [PeopleEntity](./src/main/java/com/sean/csvproject/entity/PeopleEntity.java)
     - `long id` (PK), `String firstname`, `String lastname`, `String email`
 
-- CsvService
+- [CsvService](./src/main/java/com/sean/csvproject/service/CsvService.java)
     - persistPeopleData
         - JPA `saveAll()` 사용 DB에 데이터 삽입.
         - `@Value("${spring.jpa.properties.hibernate.jdbc.batch_size}")`로 지정된 `batch_size`를 사용하여 분할 `saveAll()` 진행
@@ -113,7 +113,7 @@ Header Content-Type: application/json
         - `CsvUtil`의 `parseCsvToPeople` 메소드를 사용하여 CSV를 `PeopleEntity` 리스트로 파싱.
         - 파싱된 리스트를 `persistPeopleData` 메소드를 사용하여 DB에 데이터 삽입.
     
-- CsvUtil
+- [CsvUtil](./src/main/java/com/sean/csvproject/util/CsvUtil.java)
     - isCsvType
         - input으로 받은 파일의 type이 `text/csv` 인지 확인.
     - parseCsvToPeople
