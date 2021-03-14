@@ -70,7 +70,7 @@ spring.servlet.multipart.max-request-size=100MB
 
 ```
 > netstat -ano | findstr 8090
-> taskill /pid 5944 /f 
+> taskill /pid {$PID} /f 
 > sh deploy.sh
 ```
 
