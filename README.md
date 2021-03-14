@@ -122,4 +122,4 @@ Header Content-Type: application/json
 ------------
 
 ### UI Workflow 스크린샷
-- (./src/main/webapp/README.md) 참고.
+- [링크](./src/main/webapp/README.md) 참고.
